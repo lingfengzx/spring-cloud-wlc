@@ -1,0 +1,12 @@
+E:\201809space\spring-cloud-WLC\spring-cloud-WLC-base-consumer\src\main\java\org\spring\cloud\WLC\base\consumer\domian\User.java
+E:\201809space\spring-cloud-WLC\spring-cloud-WLC-base-consumer\src\main\java\org\spring\cloud\WLC\base\client\RestClient.java
+E:\201809space\spring-cloud-WLC\spring-cloud-WLC-base-consumer\src\main\java\org\spring\cloud\WLC\base\config\AvoidLoanbalanced.java
+E:\201809space\spring-cloud-WLC\spring-cloud-WLC-base-consumer\src\main\java\org\spring\cloud\WLC\base\config\LoadBalanced.java
+E:\201809space\spring-cloud-WLC\spring-cloud-WLC-base-consumer\src\main\java\org\spring\cloud\WLC\base\consumer\ConsumerApp.java
+E:\201809space\spring-cloud-WLC\spring-cloud-WLC-base-consumer\src\main\java\org\spring\cloud\WLC\base\config\ProxyConfig.java
+E:\201809space\spring-cloud-WLC\spring-cloud-WLC-base-consumer\src\main\java\org\spring\cloud\WLC\base\consumer\controller\UserController.java
+E:\201809space\spring-cloud-WLC\spring-cloud-WLC-base-consumer\src\main\java\org\spring\cloud\WLC\base\annotate\ExcludeFromComponentScan.java
+E:\201809space\spring-cloud-WLC\spring-cloud-WLC-base-consumer\src\main\java\org\spring\cloud\WLC\base\config\TestRule.java
+E:\201809space\spring-cloud-WLC\spring-cloud-WLC-base-consumer\src\main\java\org\spring\cloud\WLC\base\config\RestConfiguration.java
+E:\201809space\spring-cloud-WLC\spring-cloud-WLC-base-consumer\src\main\java\org\spring\cloud\WLC\base\consumer\controller\ProxyController.java
+E:\201809space\spring-cloud-WLC\spring-cloud-WLC-base-consumer\src\main\java\org\spring\cloud\WLC\base\client\RestClientAutoConfiguration.java

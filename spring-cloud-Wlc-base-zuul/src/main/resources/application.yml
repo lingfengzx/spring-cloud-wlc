@@ -1,0 +1,39 @@
+spring:
+  application:
+    name: zuul-base
+
+zuul:
+  routes:
+    provider-base: /user/**
+
+server:
+  port: 8093
+eureka:
+  client:
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://root:root@localhost:8761/eureka
+
+#other way1
+#zuul:
+#  routes:
+#    demo:
+#      path: /user/**
+#      serviceId: provider-demo
+
+#other way2
+#zuul:
+#  routes:
+#    demo:
+#      path: /user/**
+#      url: http://localhost:8078/
+
+#more server  loadbalance
+#zuul:
+#  routes:
+#    demo:
+#      path: /user/**
+#      serviceId: provider-demo
+#provider-demo:
+#  ribbon:  
+#      listOfServers: http://localhost:8078,http://localhost:8079

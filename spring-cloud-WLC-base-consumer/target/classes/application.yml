@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: consumer-base
+server:
+  port: 8079
+  
+  
+eurekaServer:
+  host: localhost
+  port: 8761
+  user: root
+  password: root
+
+eureka:
+  client:
+    #将此项目注册到Eureka服务
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://${eurekaServer.user}:${eurekaServer.password}@${eurekaServer.host}:${eurekaServer.port}/eureka
+      
+#代理设置
+proxy:
+  enabled: true
+  host: 192.168.1.252
+  port: 10082
+
+#REST超时配置
+rest:
+  ReadTimeout: 35000
+  ConnectTimeout: 5000
+
