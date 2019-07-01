@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Implementation-Title: spring-cloud-WLC-base-provider-2
+Implementation-Title: spring-cloud-WLC-user-provider
 Implementation-Version: 0.0.1-SNAPSHOT
 Built-By: zxk
 Implementation-Vendor-Id: com.spring.cloud.wlc

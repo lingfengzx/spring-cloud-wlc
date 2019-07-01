@@ -10,9 +10,9 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<groupId>com.spring.cloud.wlc</groupId>
-	<artifactId>spring-cloud-WLC-base-provider-2</artifactId>
+	<artifactId>spring-cloud-WLC-notebook-provider</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>spring-cloud-WLC-base-provider-2</name>
+	<name>spring-cloud-WLC-notebook-provider</name>
 	<url>http://maven.apache.org</url>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
