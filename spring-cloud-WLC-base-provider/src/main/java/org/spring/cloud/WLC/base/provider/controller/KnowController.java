@@ -2,7 +2,6 @@ package org.spring.cloud.WLC.base.provider.controller;
 
 import java.util.List;
 
-import org.spring.cloud.WLC.base.provider.domain.KnowSource;
 import org.spring.cloud.WLC.base.provider.service.KnowService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.spring.cloud.wlc.base.domain.know.KnowSource;
 
 import io.searchbox.client.JestResult;
 

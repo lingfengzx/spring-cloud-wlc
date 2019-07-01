@@ -2,11 +2,12 @@ package org.spring.cloud.WLC.notebook.provider.service.impl;
 
 import java.util.List;
 
-import org.spring.cloud.WLC.notebook.provider.domain.NoteBook;
 import org.spring.cloud.WLC.notebook.provider.mapper.NoteBookMapper;
 import org.spring.cloud.WLC.notebook.provider.service.NoteBookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.spring.cloud.wlc.base.domain.notebook.NoteBook;
 @Service
 public class NoteBookServiceImpl implements NoteBookService {
 

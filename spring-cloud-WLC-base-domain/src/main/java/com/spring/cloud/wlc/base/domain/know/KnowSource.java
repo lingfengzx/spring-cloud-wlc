@@ -1,4 +1,4 @@
-package org.spring.cloud.WLC.base.provider.domain;
+package com.spring.cloud.wlc.base.domain.know;
 
 import java.io.Serializable;
 

@@ -2,11 +2,12 @@ package org.spring.cloud.WLC.user.provider.service.impl;
 
 import java.util.List;
 
-import org.spring.cloud.WLC.user.provider.domain.User;
 import org.spring.cloud.WLC.user.provider.mapper.UserMapper;
 import org.spring.cloud.WLC.user.provider.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.spring.cloud.wlc.base.domain.user.User;
 @Service
 public class UserServiceImpl implements UserService {
 	@Autowired

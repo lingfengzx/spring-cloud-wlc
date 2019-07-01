@@ -101,11 +101,12 @@
 		<module>spring-cloud-WLC-notebook-provider</module>
 		<module>spring-cloud-WLC-user-provider</module>
 		<module>spring-cloud-WLC-base-consumer</module>
-		<module>spring-cloud-WLC-base-consumerfeign</module>
+		<module>spring-cloud-WLC-base-consumer-feign</module>
 		<module>spring-cloud-WLC-base-consumer-hystrix</module>
 		<module>spring-cloud-WLC-base-consumer-feign-hystrix</module>
 		<module>spring-cloud-Wlc-base-eureka</module>
     	<module>spring-cloud-Wlc-base-eureka-high</module>
     	<module>spring-cloud-Wlc-base-zuul</module>
-  </modules>
+    	<module>spring-cloud-WLC-base-domain</module>
+	</modules>
 </project>

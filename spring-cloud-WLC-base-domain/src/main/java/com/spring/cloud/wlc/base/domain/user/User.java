@@ -1,9 +1,11 @@
-package org.spring.cloud.WLC.user.provider.domain;
+package com.spring.cloud.wlc.base.domain.user;
 
 public class User {
 	private long id;
     private String name;
     private int age;
+    private String loginname;
+    private String logininfo;
     public long getId() {
         return id;
     }
@@ -27,4 +29,22 @@ public class User {
     public void setAge(int age) {
         this.age = age;
     }
+
+	public String getLoginname() {
+		return loginname;
+	}
+
+	public void setLoginname(String loginname) {
+		this.loginname = loginname;
+	}
+
+	public String getLogininfo() {
+		return logininfo;
+	}
+
+	public void setLogininfo(String logininfo) {
+		this.logininfo = logininfo;
+	}
+    
+    
 }

@@ -1,4 +1,4 @@
-package org.spring.cloud.WLC.base.provider.domain;
+package com.spring.cloud.wlc.base.domain.know;
 
 public class KnowContent {
 	private String cn_note_title;

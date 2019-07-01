@@ -2,8 +2,9 @@ package org.spring.cloud.WLC.notebook.provider.service;
 
 import java.util.List;
 
-import org.spring.cloud.WLC.notebook.provider.domain.NoteBook;
 import org.springframework.web.bind.annotation.PostMapping;
+
+import com.spring.cloud.wlc.base.domain.notebook.NoteBook;
 
 public interface NoteBookService {
 	/**

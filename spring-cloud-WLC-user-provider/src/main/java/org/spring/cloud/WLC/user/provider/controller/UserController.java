@@ -1,10 +1,11 @@
 package org.spring.cloud.WLC.user.provider.controller;
 
-import org.spring.cloud.WLC.user.provider.domain.User;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.spring.cloud.wlc.base.domain.user.User;
 
 @RestController
 @RequestMapping("/user")

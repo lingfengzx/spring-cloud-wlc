@@ -2,7 +2,8 @@ package org.spring.cloud.WLC.user.provider.service;
 
 import java.util.List;
 
-import org.spring.cloud.WLC.user.provider.domain.User;
+import com.spring.cloud.wlc.base.domain.user.User;
+
 
 public interface UserService {
 	/**

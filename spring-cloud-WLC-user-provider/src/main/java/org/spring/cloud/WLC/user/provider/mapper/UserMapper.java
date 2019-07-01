@@ -4,7 +4,8 @@ package org.spring.cloud.WLC.user.provider.mapper;
 import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
-import org.spring.cloud.WLC.user.provider.domain.User;
+
+import com.spring.cloud.wlc.base.domain.user.User;
 
 
 @Mapper

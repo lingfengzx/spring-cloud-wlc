@@ -5,13 +5,13 @@ import java.util.List;
 
 import org.elasticsearch.search.suggest.SortBy;
 import org.spring.cloud.WLC.base.provider.dao.ElasticSearchDao;
-import org.spring.cloud.WLC.base.provider.domain.KnowContent;
-import org.spring.cloud.WLC.base.provider.domain.KnowSource;
 import org.spring.cloud.WLC.base.provider.service.KnowService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.alibaba.fastjson.JSON;
+import com.spring.cloud.wlc.base.domain.know.KnowContent;
+import com.spring.cloud.wlc.base.domain.know.KnowSource;
 
 import io.searchbox.client.JestResult;
 import io.searchbox.core.SearchResult.Hit;

@@ -1,4 +1,4 @@
-package org.spring.cloud.WLC.notebook.provider.domain;
+package com.spring.cloud.wlc.base.domain.notebook;
 
 import java.util.Date;
 

@@ -2,7 +2,7 @@ package org.spring.cloud.WLC.base.provider.service;
 
 import java.util.List;
 
-import org.spring.cloud.WLC.base.provider.domain.KnowSource;
+import com.spring.cloud.wlc.base.domain.know.KnowSource;
 
 import io.searchbox.client.JestResult;
 
