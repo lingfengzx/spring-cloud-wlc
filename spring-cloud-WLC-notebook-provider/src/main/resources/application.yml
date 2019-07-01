@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: provider-base
+    #shujuyuan
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url : jdbc:mysql://localhost:3306/wlc?useUnicode=true&characterEncoding=utf-8
+    username : root
+    password : 
+server:
+  port: 8091
+
+eurekaServer:
+  host: localhost
+  port: 8085
+  user: root
+  password: root
+
+eureka:
+  client:
+    #将此项目注册到Eureka服务
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://${eurekaServer.user}:${eurekaServer.password}@${eurekaServer.host}:${eurekaServer.port}/EurekaHighServer/eureka
+      #defaultZone: http://localhost:8761/eureka,http://localhost:8762/eureka,http://localhost:8763/eureka
+#jiazai mybatis peizhiwenjian
+mybatis:
+  mapper-locations : classpath:mapper/*Mapper.xml
+  config-location : classpath:mapper/config/sqlMapConfig.xml
+  type-aliases-package : org.spring.cloud.WLC.base.provider.domain
