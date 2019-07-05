@@ -9,7 +9,8 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 
 /**
  * Hello world!
- *
+ * 因为父项目中有SpringBoot-start，打包时提示必须要启动类，所以加了这个，实际上不需要。
+ * exclude：表示不需要连数据库
  */
 @SpringBootApplication(exclude={DataSourceAutoConfiguration.class,HibernateJpaAutoConfiguration.class})
 public class DomainApp
