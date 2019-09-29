@@ -103,6 +103,5 @@
     	<module>spring-cloud-Wlc-base-zuul</module>
     	<module>spring-cloud-WLC-base-domain</module>
     	<module>spring-cloud-WLC-base-config</module>
-    	<module>spring-cloud-WLC-base-logapi</module>
 	</modules>
 </project>
