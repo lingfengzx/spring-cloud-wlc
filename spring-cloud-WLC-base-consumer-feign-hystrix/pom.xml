@@ -37,10 +37,5 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
         </dependency>
-        <dependency>
-            <groupId>com.spring.cloud.wlc</groupId>
-            <artifactId>spring-cloud-WLC-base-domain</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
 	</dependencies>
 </project>
