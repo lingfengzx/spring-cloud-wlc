@@ -1,6 +1,0 @@
-server:
-  port: ${dev.dev1Port}
-eureka:
-  client:
-    service-url:
-      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@${dev.host}:${dev.dev2Port}/eureka,http://${dev.host}:${dev.dev3Port}/eureka
