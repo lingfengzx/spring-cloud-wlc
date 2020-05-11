@@ -14,17 +14,3 @@ spring:
           uri: https://github.com/lingfengzx/WLC_config_center
 server:
   port: 3344
-
-dev:
-  host: localhost
-  dev1Port: 8761
-  dev2Port: 8762
-  dev3Port: 8763
-
-eureka:
-  client:
-    #将此项目注册到Eureka服务
-    register-with-eureka: true
-    service-url:
-      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@${dev.host}:${dev.dev1Port}/eureka,http://${spring.security.user.name}:${spring.security.user.password}@${dev.host}:${dev.dev2Port}/eureka,http://${spring.security.user.name}:${spring.security.user.password}@${dev.host}:${dev.dev3Port}/eureka
-      
