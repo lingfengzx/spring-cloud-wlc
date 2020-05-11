@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.spring.cloud.wlc</groupId>
@@ -49,43 +51,46 @@
 			<artifactId>fastjson</artifactId>
 			<version>1.2.58</version>
 		</dependency>
-		
+
 		<!-- spring-boot整合mybatis -->
-        <dependency>
-            <groupId>org.mybatis.spring.boot</groupId>
-            <artifactId>mybatis-spring-boot-starter</artifactId>
-            <version>1.1.1</version>
-        </dependency>
-        <!-- mysql驱动 -->
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.6</version>
-        </dependency>
-        
-        <!-- spring-boot整合thymeleaf 
-        	其中nekohtml的使用是为了在后面配置LEGACYHTML5模式；spring-boot-devtools是为了配置热部署而使用
-        -->
-        <dependency>
-		    <groupId>org.springframework.boot</groupId>
-		    <artifactId>spring-boot-starter-thymeleaf</artifactId>
-		</dependency>
-		
 		<dependency>
-		    <groupId>net.sourceforge.nekohtml</groupId>
-		    <artifactId>nekohtml</artifactId>
-		    <version>1.9.18</version>
+			<groupId>org.mybatis.spring.boot</groupId>
+			<artifactId>mybatis-spring-boot-starter</artifactId>
+			<version>1.1.1</version>
 		</dependency>
-		
+		<!-- mysql驱动 -->
 		<dependency>
-		    <groupId>org.springframework.boot</groupId>
-		    <artifactId>spring-boot-devtools</artifactId>
-		    <scope>runtime</scope>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.6</version>
+		</dependency>
+
+		<!-- spring-boot整合thymeleaf 其中nekohtml的使用是为了在后面配置LEGACYHTML5模式；spring-boot-devtools是为了配置热部署而使用 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>net.sourceforge.nekohtml</groupId>
+			<artifactId>nekohtml</artifactId>
+			<version>1.9.18</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
 		</dependency>
 		<dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
 			<version>1.2.17</version>
+		</dependency>
+		<!-- 使用Spring Config -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-config</artifactId>
 		</dependency>
 
 	</dependencies>
@@ -99,9 +104,9 @@
 		<module>spring-cloud-WLC-base-consumer-hystrix</module>
 		<module>spring-cloud-WLC-base-consumer-feign-hystrix</module>
 		<module>spring-cloud-Wlc-base-eureka</module>
-    	<module>spring-cloud-Wlc-base-eureka-high</module>
-    	<module>spring-cloud-Wlc-base-zuul</module>
-    	<module>spring-cloud-WLC-base-domain</module>
-    	<module>spring-cloud-WLC-base-config</module>
+		<module>spring-cloud-Wlc-base-eureka-high</module>
+		<module>spring-cloud-Wlc-base-zuul</module>
+		<module>spring-cloud-WLC-base-domain</module>
+		<module>spring-cloud-WLC-base-config</module>
 	</modules>
 </project>
