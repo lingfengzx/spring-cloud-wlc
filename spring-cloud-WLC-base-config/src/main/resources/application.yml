@@ -14,3 +14,18 @@ spring:
           uri: https://github.com/lingfengzx/WLC_config_center
 server:
   port: 3344
+  
+eurekaServer:
+  host: localhost
+  port: 8761
+  user: root
+  password: root
+
+eureka:
+  client:
+    #将此项目注册到Eureka服务
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://${eurekaServer.user}:${eurekaServer.password}@${eurekaServer.host}:${eurekaServer.port}/eureka
+  instance:
+    prefer-ip-address: true #当猜测主机名时，服务器的IP地址应该在操作系统报告的主机名中使用
