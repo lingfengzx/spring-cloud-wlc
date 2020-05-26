@@ -1,0 +1,9 @@
+spring:
+  cloud:
+    config:
+      name: wlc-base-provider #需要获取的资源名，注意一致并且没有yml后缀
+      profile: test
+      label: master
+      discovery:
+        enabled: true  #默认false，设为true表示使用注册中心中的configserver配置，而不是自己配置configserver的uri
+        service-id: CONFIG-SERVER  #指定config server在服务发现中的serviceId，默认为：configserver
