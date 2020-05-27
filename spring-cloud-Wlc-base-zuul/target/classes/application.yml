@@ -2,9 +2,16 @@ spring:
   application:
     name: zuul-base
 
+#路由功能
 zuul:
+  #公共前缀
+  prefix: /wlc
+  #不使用原服务名称
+  ignored-services:
+    "*"
+  #起别名 保护内部服务
   routes:
-    provider-base: /user/**
+    wlc-base-provider: /knowservice/**
 
 server:
   port: 8093
