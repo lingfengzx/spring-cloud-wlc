@@ -3,7 +3,7 @@ Implementation-Title: spring-cloud-WLC-base-provider
 Implementation-Version: 0.0.1-SNAPSHOT
 Built-By: zxk
 Implementation-Vendor-Id: com.spring.cloud.wlc
-Build-Jdk: 1.8.0_131
+Build-Jdk: 1.8.0_171
 Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
  ot-starter-parent/spring-cloud-WLC/spring-cloud-WLC-base-provider
 Created-By: Maven Integration for Eclipse

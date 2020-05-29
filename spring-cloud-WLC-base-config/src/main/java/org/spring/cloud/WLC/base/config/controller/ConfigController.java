@@ -8,10 +8,8 @@ import org.springframework.web.client.RestTemplate;
 @RestController
 @RequestMapping("/config")
 public class ConfigController {
-	@Autowired
-	RestTemplate template;
-	@RequestMapping("/change")
-	public void configChange() {
-		
+	@RequestMapping("/hello")
+	public String hello() {
+		return "hello config server";
 	}
 }

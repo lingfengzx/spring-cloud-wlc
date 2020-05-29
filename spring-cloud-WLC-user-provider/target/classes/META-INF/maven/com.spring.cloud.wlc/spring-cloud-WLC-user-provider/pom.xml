@@ -24,14 +24,5 @@
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
-		</dependency>
-		<dependency>
-            <groupId>com.spring.cloud.wlc</groupId>
-            <artifactId>spring-cloud-WLC-base-domain</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
 	</dependencies>
 </project>
