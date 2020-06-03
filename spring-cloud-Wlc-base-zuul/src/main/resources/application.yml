@@ -16,7 +16,8 @@ zuul:
     # 开启限流
     enabled: true
     # 存储方式
-    repository: REDIS
+    #基于本地内存，底层是ConcurrentHashMap，默认的。
+    #repository: REDIS
     # 限流策略
     policies:
       # 指定限流服务
