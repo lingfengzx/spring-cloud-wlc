@@ -1,0 +1,9 @@
+E:\201809space\spring-cloud-WLC\spring-cloud-WLC-base-consumer-feign\src\main\java\org\spring\cloud\WLC\base\config\TestRule.java
+E:\201809space\spring-cloud-WLC\spring-cloud-WLC-base-consumer-feign\src\main\java\org\spring\cloud\WLC\base\config\Configuration.java
+E:\201809space\spring-cloud-WLC\spring-cloud-WLC-base-consumer-feign\src\main\java\org\spring\cloud\WLC\base\config\LoadBalanced.java
+E:\201809space\spring-cloud-WLC\spring-cloud-WLC-base-consumer-feign\src\main\java\org\spring\cloud\WLC\base\consumer\domian\User.java
+E:\201809space\spring-cloud-WLC\spring-cloud-WLC-base-consumer-feign\src\main\java\org\spring\cloud\WLC\base\annotate\ExcludeFromComponentScan.java
+E:\201809space\spring-cloud-WLC\spring-cloud-WLC-base-consumer-feign\src\main\java\org\spring\cloud\WLC\base\consumer\controller\UserController.java
+E:\201809space\spring-cloud-WLC\spring-cloud-WLC-base-consumer-feign\src\main\java\org\spring\cloud\WLC\base\consumer\ConsumerFeignApp.java
+E:\201809space\spring-cloud-WLC\spring-cloud-WLC-base-consumer-feign\src\main\java\org\spring\cloud\WLC\base\consumer\feign\UserFeignClient.java
+E:\201809space\spring-cloud-WLC\spring-cloud-WLC-base-consumer-feign\src\main\java\org\spring\cloud\WLC\base\config\AvoidLoanbalanced.java
