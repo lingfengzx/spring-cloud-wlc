@@ -131,5 +131,6 @@
 		<module>spring-cloud-WLC-base-domain</module>
 		<module>spring-cloud-WLC-base-config</module>
     <module>spring-cloud-WLC-base-oauth2</module>
+    <module>spring-cloud-WLC-base-oauth2-jwt</module>
   </modules>
 </project>
