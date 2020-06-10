@@ -3,8 +3,8 @@ spring:
     name: auth-server
   redis:
     database: 2
-    host: localhost
-    port: 32768
+    host: 123.56.110.16
+    port: 6379
     password: 123456
     jedis:
       pool:
@@ -14,7 +14,7 @@ spring:
     timeout: 100ms
 
 server:
-  port: 6001
+  port: 7011
 
 management:
   endpoint:
@@ -24,4 +24,4 @@ eureka:
   client:
     register-with-eureka: true
     service-url:
-      defaultZone: http://root:root@localhost:8761/eureka
+      defaultZone: http://root:root@123.57.207.4:7001/eureka,http://root:root@123.57.207.4:7002/eureka

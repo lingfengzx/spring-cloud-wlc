@@ -1,31 +1,50 @@
 <?xml version="1.0"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>com.spring.cloud.wlc</groupId>
-    <artifactId>spring-cloud-WLC</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-  </parent>
-  <groupId>com.spring.cloud.wlc.oauth2</groupId>
-  <artifactId>spring-cloud-WLC-base-oauth2</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>spring-cloud-WLC-base-oauth2</name>
-  <url>http://maven.apache.org</url>
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
-    <!--spring-cloud-starter-oauth2包含了 spring-cloud-starter-security  -->
-    <dependency>
-	    <groupId>org.springframework.cloud</groupId>
-	    <artifactId>spring-cloud-starter-oauth2</artifactId>
-	</dependency>
-  </dependencies>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.spring.cloud.wlc</groupId>
+		<artifactId>spring-cloud-WLC</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<groupId>com.spring.cloud.wlc.oauth2</groupId>
+	<artifactId>spring-cloud-WLC-base-oauth2</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>spring-cloud-WLC-base-oauth2</name>
+	<url>http://maven.apache.org</url>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+		<!--spring-cloud-starter-oauth2包含了 spring-cloud-starter-security -->
+		<!-- <dependency> <groupId>org.springframework.cloud</groupId> <artifactId>spring-cloud-starter-oauth2</artifactId> 
+			</dependency> -->
+		<!-- 上面默认的有问题，指明版本，解决redis存储出现的问题：java.lang.NoSuchMethodError: org.springframework.data.redis.connection.RedisConnection.set([B[B)V问题 -->
+		<!--spring security 、oauth、jwt依赖 -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-security</artifactId>
+			<exclusions>
+				<!--旧版本 redis操作有问题 -->
+				<exclusion>
+					<artifactId>spring-security-oauth2</artifactId>
+					<groupId>org.springframework.security.oauth</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.security.oauth</groupId>
+			<artifactId>spring-security-oauth2</artifactId>
+			<version>2.3.3.RELEASE</version>
+		</dependency>
+	</dependencies>
 </project>

@@ -10,6 +10,7 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.A
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerSecurityConfigurer;
+import org.springframework.security.oauth2.provider.token.DefaultTokenServices;
 import org.springframework.security.oauth2.provider.token.TokenStore;
 
 /**
@@ -38,6 +39,7 @@ public class OAuth2Config extends AuthorizationServerConfigurerAdapter {
 	/**
 	 * authenticationManage() 调用此方法才能支持 password 模式。 userDetailsService() 设置用户验证服务。
 	 * tokenStore() 指定 token 的存储方式。
+	 * tokenServices设置token过期时间。
 	 */
 	@Override
 	public void configure(final AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
@@ -46,6 +48,7 @@ public class OAuth2Config extends AuthorizationServerConfigurerAdapter {
 		 */
 		endpoints.authenticationManager(authenticationManager).userDetailsService(kiteUserDetailsService)
 				.tokenStore(redisTokenStore);
+		
 
 	}
 
@@ -117,7 +120,8 @@ public class OAuth2Config extends AuthorizationServerConfigurerAdapter {
 	public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
 		clients.inMemory().withClient("order-client").secret(passwordEncoder.encode("order-secret-8888"))
 				.authorizedGrantTypes("refresh_token", "authorization_code", "password")
-				.accessTokenValiditySeconds(3600).scopes("all").and().withClient("user-client")
+				.accessTokenValiditySeconds(3600).scopes("all")
+				.and().withClient("user-client")
 				.secret(passwordEncoder.encode("user-secret-8888"))
 				.authorizedGrantTypes("refresh_token", "authorization_code", "password")
 				.accessTokenValiditySeconds(3600).scopes("all");
