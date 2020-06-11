@@ -2,8 +2,17 @@ spring:
   cloud:
     config:
       name: wlc-base-provider #需要获取的资源名，注意一致并且没有yml后缀
-      profile: test
+      profile: dev
       label: master
+#      uri: http://123.57.207.4:3344/
       discovery:
         enabled: true  #默认false，设为true表示使用注册中心中的configserver配置，而不是自己配置configserver的uri
         service-id: CONFIG-SERVER  #指定config server在服务发现中的serviceId，默认为：configserver
+eureka:
+  client:
+    #将此项目注册到Eureka服务
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://root:root@123.57.207.4:7001/eureka,http://root:root@123.57.207.4:7002/eureka
+      #defaultZone: http://localhost:8761/eureka,http://localhost:8762/eureka,http://localhost:8763/eureka
+    
