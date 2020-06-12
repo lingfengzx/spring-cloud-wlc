@@ -3,12 +3,15 @@ package org.spring.cloud.WLC.base.oauth2.jwt.config;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.sql.DataSource;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.oauth2.config.annotation.builders.JdbcClientDetailsServiceBuilder;
 import org.springframework.security.oauth2.config.annotation.configurers.ClientDetailsServiceConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurerAdapter;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
@@ -48,10 +51,8 @@ public class OAuth2Config extends AuthorizationServerConfigurerAdapter {
 	@Autowired
 	private TokenEnhancer jwtTokenEnhancer;
 
-	@Bean
-	public TokenEnhancer jwtTokenEnhancer() {
-		return new JwtTokenEnhancer();
-	}
+	@Autowired
+	private DataSource dataSource;
 
 	/**
 	 * authenticationManage() 调用此方法才能支持 password 模式。 userDetailsService() 设置用户验证服务。
@@ -61,7 +62,6 @@ public class OAuth2Config extends AuthorizationServerConfigurerAdapter {
 	 */
 	@Override
 	public void configure(final AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
-
 		/**
 		 * jwt 增强模式
 		 */
@@ -146,14 +146,21 @@ public class OAuth2Config extends AuthorizationServerConfigurerAdapter {
 	 *           clients.jdbc(dataSource); jcsb.passwordEncoder(passwordEncoder); }
 	 * 
 	 */
+	/*
+	 * @Override public void configure(ClientDetailsServiceConfigurer clients)
+	 * throws Exception {
+	 * clients.inMemory().withClient("order-client").secret(passwordEncoder.encode(
+	 * "order-secret-8888")) .authorizedGrantTypes("refresh_token",
+	 * "authorization_code", "password")
+	 * .accessTokenValiditySeconds(3600).scopes("all").and().withClient(
+	 * "user-client") .secret(passwordEncoder.encode("user-secret-8888"))
+	 * .authorizedGrantTypes("refresh_token", "authorization_code", "password")
+	 * .accessTokenValiditySeconds(3600).scopes("all"); }
+	 */
 	@Override
 	public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
-		clients.inMemory().withClient("order-client").secret(passwordEncoder.encode("order-secret-8888"))
-				.authorizedGrantTypes("refresh_token", "authorization_code", "password")
-				.accessTokenValiditySeconds(3600).scopes("all").and().withClient("user-client")
-				.secret(passwordEncoder.encode("user-secret-8888"))
-				.authorizedGrantTypes("refresh_token", "authorization_code", "password")
-				.accessTokenValiditySeconds(3600).scopes("all");
+		JdbcClientDetailsServiceBuilder jcsb = clients.jdbc(dataSource);
+		jcsb.passwordEncoder(passwordEncoder);
 	}
 
 	/**

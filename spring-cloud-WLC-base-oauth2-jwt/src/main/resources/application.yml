@@ -1,6 +1,15 @@
 spring:
   application:
     name: auth-server
+  datasource: 
+    url: jdbc:mysql://123.56.110.16:3306/wlc_base?useUnicode=true&characterEncoding=utf-8
+    username: root 
+    password: lingfengZX@929029
+    hikari: 
+      connection-timeout: 30000
+      idle-timeout: 600000 
+      max-lifetime: 1800000 
+      maximum-pool-size: 9
 
 server:
   port: 7011

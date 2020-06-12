@@ -3,10 +3,12 @@ package org.spring.cloud.WLC.base.oauth2.jwt.config;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.springframework.security.core.userdetails.User;
 import org.springframework.security.oauth2.common.DefaultOAuth2AccessToken;
 import org.springframework.security.oauth2.common.OAuth2AccessToken;
 import org.springframework.security.oauth2.provider.OAuth2Authentication;
 import org.springframework.security.oauth2.provider.token.TokenEnhancer;
+import org.springframework.stereotype.Component;
 
 /*增强 JWT
 如果我想在 JWT 中加入额外的字段(比方说用户的其他信息)怎么办呢，当然可以。spring security oauth2 提供了 TokenEnhancer 增强器。其实不光 JWT ，RedisToken 的方式同样可以。
@@ -16,12 +18,14 @@ import org.springframework.security.oauth2.provider.token.TokenEnhancer;
  * @author zxk
  *
  */
+@Component
 public class JwtTokenEnhancer implements TokenEnhancer {
 
     @Override
     public OAuth2AccessToken enhance(OAuth2AccessToken oAuth2AccessToken, OAuth2Authentication oAuth2Authentication) {
         Map<String, Object> info = new HashMap<>();
-        info.put("jwt-ext", "JWT 扩展信息");
+        User user=(User) oAuth2Authentication.getPrincipal();
+        info.put("jwt-ext", user.getAuthorities().toString());
         ((DefaultOAuth2AccessToken) oAuth2AccessToken).setAdditionalInformation(info);
         return oAuth2AccessToken;
     }
