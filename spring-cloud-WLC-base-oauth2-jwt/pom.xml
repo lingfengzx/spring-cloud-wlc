@@ -24,6 +24,12 @@
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
+		<!-- jwt 加密解密需要的 -->
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt</artifactId>
+			<version>0.7.0</version>
+		</dependency>
 		<!--spring-cloud-starter-oauth2包含了 spring-cloud-starter-security -->
 		<!-- <dependency> <groupId>org.springframework.cloud</groupId> <artifactId>spring-cloud-starter-oauth2</artifactId> 
 			</dependency> -->

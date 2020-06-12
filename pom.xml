@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.spring.cloud.wlc</groupId>
@@ -44,19 +46,19 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
-		<!--eureka客户端  -->
+		<!--eureka客户端 -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>fastjson</artifactId>
@@ -103,7 +105,7 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-config</artifactId>
 		</dependency>
-		
+
 		<!-- 实体类 -->
 		<dependency>
 			<groupId>com.spring.cloud.wlc</groupId>
@@ -112,8 +114,14 @@
 		</dependency>
 		<!-- 使用redis -->
 		<dependency>
-		    <groupId>org.springframework.boot</groupId>
-		    <artifactId>spring-boot-starter-data-redis</artifactId>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-redis</artifactId>
+		</dependency>
+		<!-- 用于密码加密 -->
+		<dependency>
+			<groupId>com.github.ulisesbocchio</groupId>
+			<artifactId>jasypt-spring-boot-starter</artifactId>
+			<version>2.1.0</version>
 		</dependency>
 	</dependencies>
 
@@ -130,7 +138,7 @@
 		<module>spring-cloud-Wlc-base-zuul</module>
 		<module>spring-cloud-WLC-base-domain</module>
 		<module>spring-cloud-WLC-base-config</module>
-    <module>spring-cloud-WLC-base-oauth2</module>
-    <module>spring-cloud-WLC-base-oauth2-jwt</module>
-  </modules>
+		<module>spring-cloud-WLC-base-oauth2</module>
+		<module>spring-cloud-WLC-base-oauth2-jwt</module>
+	</modules>
 </project>
