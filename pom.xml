@@ -75,7 +75,7 @@
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<version>5.1.6</version>
+			<version>8.0.28</version>
 		</dependency>
 
 		<!-- spring-boot整合thymeleaf 其中nekohtml的使用是为了在后面配置LEGACYHTML5模式；spring-boot-devtools是为了配置热部署而使用 -->
